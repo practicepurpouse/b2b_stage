@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: admin
+  labels:
+    name: admin
+    app: b2b-stage
+spec:
+  type: ClusterIP
+  selector:
+    name: admin
+    app: b2b-stage
+  ports:
+    - port: 8065
+      targetPort: 8065

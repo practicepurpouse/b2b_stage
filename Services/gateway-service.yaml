@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: gateway
+  labels:
+    name: gateway
+    app: b2b-stage
+spec:
+  type: ClusterIP
+  selector:
+    name: gateway
+    app: b2b-stage
+  ports:
+    - port: 8060
+      targetPort: 8060
